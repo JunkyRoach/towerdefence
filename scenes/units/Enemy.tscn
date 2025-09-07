@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2ppypg6hdfym"]
+
+[ext_resource type="Script" uid="uid://cocgp8sbrd5da" path="res://scenes/units/Enemy.gd" id="1_rmvmi"]
+[ext_resource type="Texture2D" uid="uid://de61ld1jccfwe" path="res://icon.svg" id="2_20l3p"]
+
+[node name="Enemy" type="PathFollow2D"]
+rotates = false
+cubic_interp = false
+loop = false
+script = ExtResource("1_rmvmi")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_20l3p")

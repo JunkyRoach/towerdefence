@@ -27,9 +27,8 @@ func _ready() -> void:
 	
 func _update_data(p_mission_data:MissionData):
 	mission_data = p_mission_data
-	for wave:WaveData in mission_data.waves:
-		for enemy:EnemyData in wave.enemies_in_wave:
-			print(enemy.title)
+	GameController.start_battle(mission_data)
+
 	pass	
 	
 	

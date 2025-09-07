@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_0xwyn")
 title = "Fast Enemy "
-speed = 300.0
-max_hp = 100
+speed = 500.0
+max_hp = 50
 game_currency_for_kill = 10
 metadata/_custom_type_script = "uid://gfrj2mwpwopg"

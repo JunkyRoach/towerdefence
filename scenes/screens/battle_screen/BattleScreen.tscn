@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcakup8flmjtf"]
+[gd_scene load_steps=4 format=3 uid="uid://dcakup8flmjtf"]
 
 [ext_resource type="Script" uid="uid://bb70r1l8taesx" path="res://scenes/screens/battle_screen/BattleScreen.gd" id="1_ug4ku"]
+[ext_resource type="Script" uid="uid://b7g1lds2u25ph" path="res://scenes/screens/battle_screen/EnemyFactory.gd" id="2_76kaa"]
+
+[sub_resource type="Curve2D" id="Curve2D_yc5af"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1130, 404, 0, 0, 0, 0, 865, 386, 0, 0, 0, 0, 833, 239, 0, 0, 0, 0, 586, 191, 0, 0, 0, 0, 424, 391, 0, 0, 0, 0, 188, 498, 0, 0, 0, 0, 44, 490)
+}
+point_count = 7
 
 [node name="BattleScreen" type="Node2D"]
 script = ExtResource("1_ug4ku")
@@ -13,3 +20,10 @@ theme_override_font_sizes/font_size = 36
 text = "BattleScreen"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_yc5af")
+
+[node name="EnemyFactory" type="Node" parent="." node_paths=PackedStringArray("path")]
+script = ExtResource("2_76kaa")
+path = NodePath("../Path2D")
