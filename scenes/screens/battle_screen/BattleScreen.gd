@@ -9,6 +9,7 @@ static func show_screen(p_mission_data:MissionData):
 	screen.visible = true
 	screen.set_process(true)
 	screen._update_data(p_mission_data)
+	ScreenController.battle_screen_loaded.emit()
 	
 
 static func hide_screen():
@@ -23,8 +24,8 @@ func _ready() -> void:
 	screen = self
 	pass
 	
-func _update_data(p_mission_data:MissionData):
 	
+func _update_data(p_mission_data:MissionData):
 	mission_data = p_mission_data
 	for wave:WaveData in mission_data.waves:
 		for enemy:EnemyData in wave.enemies_in_wave:
