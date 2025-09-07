@@ -8,3 +8,12 @@ script = ExtResource("1_xi22d")
 
 [node name="MissionIcon" parent="." instance=ExtResource("2_lb3se")]
 position = Vector2(251, 169)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1277.0
+offset_bottom = 50.0
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 36
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
