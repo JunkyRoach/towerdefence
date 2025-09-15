@@ -29,6 +29,7 @@ func _update_data(p_mission_data:MissionData):
 	mission_data = p_mission_data
 	GameController.start_battle(mission_data)
 
-	pass	
-	
-	
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.

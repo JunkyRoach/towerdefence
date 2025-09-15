@@ -1,10 +1,12 @@
 extends Node
 
 @export var path:Path2D
+@onready var timer: Timer = $Timer
 
+@export var test_mobs:Array[EnemyData] = []
 
 func _ready() -> void:
-	GameController.batlle_started.connect(spawn_mobs)
+	#GameController.batlle_started.connect(spawn_mobs)
 	
 	pass
 
@@ -17,3 +19,8 @@ func spawn_mobs():
 		print(enemy)
 	
 	pass
+
+
+func _on_timer_timeout() -> void:
+	path.add_child(Enemy.instantiate(test_mobs.pick_random()))
+	pass # Replace with function body.

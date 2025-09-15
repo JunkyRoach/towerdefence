@@ -9,6 +9,7 @@
 [resource]
 script = ExtResource("1_4lb88")
 title = "Mission Title"
+mission_life = 5
 start_game_currency = 150
 waves = Array[ExtResource("2_0fo07")]([ExtResource("3_t221n"), ExtResource("4_bkcp4"), ExtResource("5_6bkkn")])
 metadata/_custom_type_script = "uid://chm6ihwh27xlo"
